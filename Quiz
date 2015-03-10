@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Assessment2
+{
+    public partial class QuizLoginForm : Form
+    {
+        public QuizLoginForm()
+        {
+            InitializeComponent();
+        }
+
+        private void MenuItemFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuItemExit_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to close this window?";
+            string title = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
+        private void UserLogin_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void QuizLoginButton_Click(object sender, EventArgs e)
+        {
+            string var;
+            var = UserLogin.Text;
+            MessageBox.Show("Welcome " + var);
+
+            if ()
+        }
+    }
+}
