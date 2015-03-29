@@ -1,0 +1,105 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Assessment2
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void MenuItemFile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuItemExit_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to close this window?";
+            string title = "Close Window";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void buttonTopic1_Click(object sender, EventArgs e)
+        {
+            string message = "Is this the topic you wish to select?";
+            string title = "Selection of Topic";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Topic1 form = new Topic1();
+                form.Show();
+                this.Hide();
+            }
+        }
+
+        private void buttonTopic2_Click(object sender, EventArgs e)
+        {
+           string message = "Is this the topic you wish to select?";
+            string title = "Selection of Topic";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Topic2 form = new Topic2();
+                form.Show();
+                this.Hide();
+            }
+        }
+
+        private void buttonTopic3_Click(object sender, EventArgs e)
+        {
+            string message = "Is this the topic you wish to select?";
+            string title = "Selection of Topic";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Topic3 form = new Topic3();
+                form.Show();
+                this.Hide();
+            }
+        }
+
+        private void buttonTopic4_Click(object sender, EventArgs e)
+        {
+            string message = "Is this the topic you wish to select?";
+            string title = "Selection of Topic";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                Topic4 form = new Topic4();
+                form.Show();
+                this.Hide();
+            }
+        }
+
+        private void buttonPrevious_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.Show();
+        }
+    }
+}
