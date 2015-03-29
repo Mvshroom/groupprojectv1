@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assessment2
 {
-    public partial class QuizLoginForm : Form
+    public partial class Form1 : Form
     {
-        public QuizLoginForm()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -21,7 +21,6 @@ namespace Assessment2
         {
 
         }
-
         private void MenuItemExit_Click(object sender, EventArgs e)
         {
             string message = "Do you want to close this window?";
@@ -33,21 +32,39 @@ namespace Assessment2
             {
                 Application.Exit();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
         private void UserLogin_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void QuizLoginButton_Click(object sender, EventArgs e)
+        private void QuizEnterName_Click(object sender, EventArgs e)
         {
             string var;
             var = UserLogin.Text;
-            MessageBox.Show("Welcome " + var);
-
-            if ()
+            if (var.Length >= 15 || var.Length <= 0)
+            {
+                MessageBox.Show("Please enter a name between 1 and 15 letters");
+            }
+            else
+            {
+                MessageBox.Show("Welcome " + var);
+                QuizLoginContinue.Visible = true;
+            }
         }
+
+        private void QuizLoginContinue_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            this.Hide();
+            form.Show();
+        }
+
     }
 }
